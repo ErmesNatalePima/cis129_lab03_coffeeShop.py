@@ -15,10 +15,21 @@ total_coffee = int(num_coffee)*5 #gets the number value and keeps it as an integ
 input_muffin = input('Number of muffins bought?') #creates int var of what we need
 total_muffin = int(input_muffin)*4 #gets the number value and keeps it as an integer
 
-print('My Coffee and Muffin Shop Receipt')
+input_soda = input('Number of sodas bought?')
+num_soda = int(input_soda) #creates int var of what we need
+total_soda = int(num_soda)*5 #gets the number value and keeps it as an integer
+
+input_watch = input('Number of watches bought?')
+num_watch = int(input_watch) #creates int var of what we need
+total_watch = int(num_watch)*5 #gets the number value and keeps it as an integer
+
+print('My Coffee and Muffin and Soda and Watches Shop Receipt')
 print(str(input_coffee) + ' Coffees at $5 each: $' + str(total_coffee) + '.00') #so you can only concat strings and not integers, change the var ot a string in this instance
 print(str(input_muffin) + ' Muffins at $4 each: $' + str(total_muffin) +'.00') #so you can only concat strings and not integers, change the var ot a string in this instance
-total_liberty = int(total_coffee) + int(total_muffin)
+print(str(input_soda) + ' Sodas at $2 each: $' + str(total_soda) +'.00') #so you can only concat strings and not integers, change the var ot a string in this instance
+print(str(input_watch) + ' Watches at $44 each: $' + str(total_watch) +'.00') #so you can only concat strings and not integers, change the var ot a string in this instance
+
+total_liberty = int(total_coffee) + int(total_muffin) + int(total_soda) + int(total_watch)
 tax_raw = int(total_liberty) * 0.06
 rounded_tax = round(tax_raw, 2) #this rounds the value to two decimal places
 grand_total = int(total_liberty) + int(rounded_tax)
