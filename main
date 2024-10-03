@@ -1,0 +1,28 @@
+'''
+So I really messed this up. I started in Git and just ran it in there. It took me 20mins to search my computer just to find Jupyter.
+I added ext and everything to run it on Github.
+I'm documenting and adding notes in here, too. 
+ex post facto
+'''
+print('My Coffee and Muffin Shop')
+#print('Number of coffees bought?') WRONG
+input_coffee = input('Number of coffees bought?')
+num_coffee = int(input_coffee) #creates int var of what we need
+total_coffee = int(num_coffee)*5 #gets the number value and keeps it as an integer
+
+#print('Number of muffins bought?')
+#input_muffin = input(int) WSRONG
+input_muffin = input('Number of muffins bought?') #creates int var of what we need
+total_muffin = int(input_muffin)*4 #gets the number value and keeps it as an integer
+
+print('My Coffee and Muffin Shop Receipt')
+print(str(input_coffee) + ' Coffees at $5 each: $' + str(total_coffee) + '.00') #so you can only concat strings and not integers, change the var ot a string in this instance
+print(str(input_muffin) + ' Muffins at $4 each: $' + str(total_muffin) +'.00') #so you can only concat strings and not integers, change the var ot a string in this instance
+total_liberty = int(total_coffee) + int(total_muffin)
+tax_raw = int(total_liberty) * 0.06
+rounded_tax = round(tax_raw, 2) #this rounds the value to two decimal places
+grand_total = int(total_liberty) + int(rounded_tax)
+
+print('6% tax: $' + str(rounded_tax)) #concat int to str issues
+print('---------')
+print('Total: $' + str(grand_total)) #concat int to str issues
